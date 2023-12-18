@@ -39,7 +39,7 @@ class HeroController extends Controller
      */
     public function show(Hero $hero)
     {
-        //
+        return view('heroes.show',compact('hero'));
     }
 
     /**

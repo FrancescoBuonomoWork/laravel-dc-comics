@@ -21,7 +21,7 @@
                             <td>
                                 <img src="{{$hero->thumb}}" width="50" alt="">
                             </td>
-                            <td>{{$hero->title}}</td>
+                            <td><a href="{{route('heroes.show',$hero)}}">{{$hero->title}}</a></td>
                             <td>{{$hero->series}}</td>
                             <td>{{$hero->type}}</td>
                             <td>{{$hero->price}}</td>
