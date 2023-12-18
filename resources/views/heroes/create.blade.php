@@ -24,7 +24,11 @@
               </div>
               <div class="mb-3">
                 <label for="series" class="form-label">series</label>
-                <input type="type" class="form-control" name="series" id="type">
+                <input type="text" class="form-control" name="series" id="series">
+              </div>
+              <div class="mb-3">
+                <label for="type" class="form-label">type</label>
+                <input type="text" class="form-control" name="type" id="type">
               </div>
               <div class="mb-3">
                 <label for="description" class="form-label">description</label>

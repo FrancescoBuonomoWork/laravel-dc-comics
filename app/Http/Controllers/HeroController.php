@@ -33,7 +33,18 @@ class HeroController extends Controller
     {
         $data = $request->all();
 
-        dd($data);
+        $newHero = new Hero();
+        $newHero->title = $data['title'];
+        $newHero->description = $data['description'];
+        $newHero->thumb = $data['thumb'];
+        $newHero->series = $data['series'];
+        $newHero->sale_date = $data['sale_date'];
+        $newHero->type = $data['type'];
+        $newHero->price = $data['price'];
+        $newHero->save();
+
+        return redirect()->route('heroes.show',$newHero->id);
+        // dd($data);
     }
 
     /**
