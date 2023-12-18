@@ -4,7 +4,7 @@
 
 <section>
     <div class="container">
-        <form>
+        <form action="{{route('heroes.store')}}" method="POST">
             <div class="mb-3">
               <label for="hero-title" class="form-label">hero title</label>
               <input type="text" class="form-control" name="title" id="hero-title">
@@ -22,8 +22,8 @@
                 <input type="text" class="form-control" name="sale_date" id="sale_date">
               </div>
               <div class="mb-3">
-                <label for="type" class="form-label">thumb-src</label>
-                <input type="type" class="form-control" name="type" id="type">
+                <label for="series" class="form-label">series</label>
+                <input type="type" class="form-control" name="series" id="type">
               </div>
               <div class="mb-3">
                 <label for="description" class="form-label">description</label>

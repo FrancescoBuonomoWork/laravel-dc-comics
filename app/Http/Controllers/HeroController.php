@@ -31,7 +31,9 @@ class HeroController extends Controller
      */
     public function store(StoreHeroRequest $request)
     {
-        //
+        $data = $request->all();
+
+        dd($data);
     }
 
     /**
