@@ -19,5 +19,6 @@ Route::get('/', function () {
 });
 Route::get('/heroes',[HeroController::class,'index'])->name('heroes.index');
 
+Route::get('/heroes/create',[HeroController::class,'create'])->name('heroes.create');
 Route::get('/heroes/{hero}',[HeroController::class,'show'])->name('heroes.show');
 

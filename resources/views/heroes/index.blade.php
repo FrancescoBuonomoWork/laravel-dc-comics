@@ -6,6 +6,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
+                <a class="btn btn-primary" href="{{route('heroes.create')}}">Add Hero</a>
                 <table class="table">
                     <thead>
                         <th scope="col">thumb</th>
