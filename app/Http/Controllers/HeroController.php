@@ -14,7 +14,8 @@ class HeroController extends Controller
     public function index()
     {
         $heroes = Hero::all();
-        return
+        // ritorna la vista che mostre l'elenco recuperato dal db
+        return view('heroes.index', compact('heroes'));
     }
 
     /**

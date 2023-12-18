@@ -8,21 +8,29 @@
             <div class="col-12">
                 <table class="table">
                     <thead>
-                        <th scope="col">#</th>
-                        <th scope="col">#</th>
-                        <th scope="col">#</th>
-                        <th scope="col">#</th>
-                        <th scope="col">#</th>
+                        <th scope="col">thumb</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">series</th>
+                        <th scope="col">type</th>
+                        <th scope="col">price</th>
+                        <th scope="col">Sale date</th>
                     </thead>
                     <tbody>
-                        @forelse ($collection as $item)
+                        @forelse ($heroes as $hero)
+                        <tr>
+                            <td>
+                                <img src="{{$hero->thumb}}" width="50" alt="">
+                            </td>
+                            <td>{{$hero->title}}</td>
+                            <td>{{$hero->series}}</td>
+                            <td>{{$hero->type}}</td>
+                            <td>{{$hero->price}}</td>
+                            <td>{{$hero->sale_date}}</td>
+                        </tr>
                             
                         @empty
                             
                         @endforelse
-                        <tr>
-                            <td></td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
