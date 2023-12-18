@@ -228,13 +228,13 @@ class HeroSeeder extends Seeder
         ];
         foreach ($heroes as  $hero) {
             $new_hero = new Hero();
-            $new_hero->title = $hero['title'];
-            $new_hero->description = $hero['description'];
-            $new_hero->thumb = $hero['thumb'];
-            $new_hero->price = $hero['price'];
-            $new_hero->series = $hero['series'];
-            $new_hero->sale_date = $hero['sale_date'];
-            $new_hero->type = $hero['type'];
+            $new_hero->title = trim($hero['title']);
+            $new_hero->description = trim($hero['description']);
+            $new_hero->thumb = trim($hero['thumb']);
+            $new_hero->price = floatval(trim(str_replace('$','',$hero['price'])));
+            $new_hero->series = trim($hero['series']);
+            $new_hero->sale_date = trim($hero['sale_date']);
+            $new_hero->type = trim($hero['type']);
             // $new_hero->artists = $hero['artists'];
             // $new_hero->writers = $hero['writers'];
 

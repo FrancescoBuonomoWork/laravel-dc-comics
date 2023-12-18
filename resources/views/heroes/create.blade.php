@@ -5,6 +5,7 @@
 <section>
     <div class="container">
         <form action="{{route('heroes.store')}}" method="POST">
+            @csrf
             <div class="mb-3">
               <label for="hero-title" class="form-label">hero title</label>
               <input type="text" class="form-control" name="title" id="hero-title">
