@@ -60,7 +60,7 @@ class HeroController extends Controller
      */
     public function edit(Hero $hero)
     {
-        //
+        return view('heroes.edit',compact('hero'));
     }
 
     /**
@@ -68,7 +68,10 @@ class HeroController extends Controller
      */
     public function update(UpdateHeroRequest $request, Hero $hero)
     {
-        //
+        $data = $request->all();
+        dd($data);
+        $hero->update($data);
+        return redirect()->route('heroes.show',$hero);
     }
 
     /**
@@ -76,6 +79,8 @@ class HeroController extends Controller
      */
     public function destroy(Hero $hero)
     {
-        //
+        $hero->delete();
+
+        return redirect()->route('heroes.index');
     }
 }

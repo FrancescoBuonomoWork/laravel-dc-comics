@@ -16,7 +16,7 @@
                 <li>{{$hero->price}}</li>
                 <li>{{$hero->sale_date}}</li>
             </ul>
-            <p>{{$hero->description}}</p>
+            <p>{!! $hero->description !!}</p>
            </div>
         </div>
     </div>
