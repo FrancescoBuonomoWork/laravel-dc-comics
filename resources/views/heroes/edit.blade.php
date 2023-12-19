@@ -4,7 +4,7 @@
 
 <section>
     <div class="container">
-        <form action="{{ route('heroes.update','$hero') }}" method="POST">
+        <form action="{{ route('heroes.update', $hero) }}" method="POST">
             @csrf
             {{-- aggiungiamo un metodo  --}}
             @method('PUT')

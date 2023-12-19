@@ -69,9 +69,9 @@ class HeroController extends Controller
     public function update(UpdateHeroRequest $request, Hero $hero)
     {
         $data = $request->all();
-        dd($data);
+        //dd($data);
         $hero->update($data);
-        return redirect()->route('heroes.show',$hero);
+        return redirect()->route('heroes.show', $hero->id);
     }
 
     /**
