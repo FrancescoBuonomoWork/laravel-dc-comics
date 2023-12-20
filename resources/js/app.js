@@ -5,7 +5,7 @@ import.meta.glob([
     '../img/**'
 ])
 
-// recuperiamo i form 
+// recuperiamo i bottoni del form
 const deleteForms = document.querySelectorAll('.form-delete');
 // recuperiamo la modale di bootstrap 
 const deleteModal = new bootstrap.Modal('#modalDelete');
